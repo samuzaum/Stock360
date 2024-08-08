@@ -21,9 +21,8 @@ body {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: linear-gradient(135deg, #4b0082, #8a2be2, #d15dff);
+    background: linear-gradient(135deg, #e4a54e, #e4a54e, #e4a54e);
     background-size: 600% 600%;
-    animation: gradientAnimation 20s ease infinite;
     z-index: -3;
 }
 
@@ -98,15 +97,14 @@ body {
     width: 90vw; 
     max-width: 100%;
     min-height: 95vh; 
-    background: url('src/fundologin.jpg') no-repeat center center/cover;
     border-radius: 25px;
     z-index: -1;
     filter: blur(5px);
-    background-color: #d15dff;
+    background-color: #e4a54e;
 }
 
 .container {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: #e99929;
     border-radius: 10px;
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
     width: 60vw; 
@@ -183,7 +181,7 @@ input {
     border: none;
     border-radius: 20px;
     padding: 12px 15px;
-    margin: 8px 0;
+    margin: 15px ;
     width: 100%;
     color: #fff;
     font-family: "Montserrat",sans-serif;
@@ -194,6 +192,7 @@ input::placeholder {
     font-family: "Montserrat",sans-serif;
 }
 button {
+    margin-bottom: 15px;
     font-family: "Montserrat",sans-serif;
     border-radius: 20px;
     border: 1px solid #dcaaf8;
@@ -216,7 +215,7 @@ button:focus {
 }
 
 a {
-    color: #dcaaf8;
+    color: #7c3b10;
     text-decoration: none;  
     margin: 15px 0;
 }
