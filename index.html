@@ -30,8 +30,35 @@
                 <span>Já tem uma conta? <a href="#" id="signIn">Entre</a></span>
             </form>
         </div>
+        <div class="logo-message-container right">
+            <div class="logo-message-content">
+                <img src="./images/logo_preta.png" alt="Logo" class="logo"> <!-- Espaço para a logo -->
+                <div class="welcome-message">Seja bem-vindo!</div> <!-- Mensagem de boas-vindas -->
+            </div>
+        </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="js/loginclick.js"></script>
+    <script>
+        const container = document.getElementById('container');
+        const signUpButton = document.getElementById('signUp');
+        const signInButton = document.getElementById('signIn');
+
+        signUpButton.addEventListener('click', () => {
+            container.classList.add('right-panel-active');
+            setTimeout(() => {
+                document.querySelector('.logo-message-container').classList.remove('right');
+                document.querySelector('.logo-message-container').classList.add('left');
+            }, 300);
+        });
+
+        signInButton.addEventListener('click', () => {
+            container.classList.remove('right-panel-active');
+            setTimeout(() => {
+                document.querySelector('.logo-message-container').classList.remove('left');
+                document.querySelector('.logo-message-container').classList.add('right');
+            }, 300);
+        });
+    </script>
 </body>
 </html>
+
