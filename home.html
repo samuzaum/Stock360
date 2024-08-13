@@ -23,22 +23,25 @@
     <div class="container">
         <aside>
             <div class="asidediv">
-                <a href="#" class="asidelink">Inicio</a>
-                <a href="#" class="asidelink">Entrada</a>
-                <a href="#" class="asidelink">Produtos</a>
-                <a href="#" class="asidelink">Pedidos</a>
-                <a href="#" class="asidelink">Fornecedores</a>
-                <a href="#" class="asidelink">Suporte</a>
-                <a href="#" class="asidelink">Sobre</a>
+                <a href="#" class="asidelink" data-page="inicio">Inicio</a>
+                <a href="#" class="asidelink" data-page="entrada">Entrada</a>
+                <a href="#" class="asidelink" data-page="produtos">Produtos</a>
+                <a href="#" class="asidelink" data-page="pedidos">Pedidos</a>
+                <a href="#" class="asidelink" data-page="fornecedores">Fornecedores</a>
+                <a href="#" class="asidelink" data-page="suporte">Suporte</a>
+                <a href="#" class="asidelink" data-page="sobre">Sobre</a>
             </div>
         </aside>
         <div id="notification" class="notification hidden">Produto adicionado ao carrinho!</div>
-        <main>
+        <main id="main-content">
+            <h1>Bem-vindo à Página Inicial</h1>
+            <p>Escolha uma opção no menu para começar.</p>
         </main>
     </div>
     <footer></footer>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
     <script src="js/notificacao.js"></script>
     <script src="js/categorias.js"></script>
+    <script src="js/loadContent.js"></script>
 </body>
 </html>
