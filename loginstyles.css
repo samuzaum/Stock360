@@ -21,7 +21,7 @@ body {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: linear-gradient(135deg, #4b0082, #8a2be2, #d15dff);
+    background: linear-gradient(135deg, #ffffff, #fffdfd, #ffffff);
     background-size: 600% 600%;
     animation: gradientAnimation 20s ease infinite;
     z-index: -3;
@@ -98,15 +98,14 @@ body {
     width: 90vw; 
     max-width: 100%;
     min-height: 95vh; 
-    background: url('src/fundologin.jpg') no-repeat center center/cover;
     border-radius: 25px;
     z-index: -1;
     filter: blur(5px);
-    background-color: #d15dff;
+    background-color: #ffffff;
 }
 
 .container {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: #dfa759;
     border-radius: 10px;
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
     width: 60vw; 
@@ -117,7 +116,9 @@ body {
     border: 2px solid rgba(0, 0, 0, 0.3); 
     backdrop-filter: blur(20px); 
     -webkit-backdrop-filter: blur(7px);
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .form-container {
@@ -153,6 +154,31 @@ body {
     z-index: 1;
 }
 
+.logo-message-container {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.6s ease-in-out;
+    z-index: 1;
+}
+
+.logo-message-container.left {
+    transform: translateX(-5%);
+    left: 0;
+}
+
+.logo-message-container.right {
+    transform: translateX(5%);
+    right: 0;
+}
+
+.logo-message-content {
+    text-align: center;
+}
+
 form {
     background-color: transparent;
     display: flex;
@@ -163,6 +189,7 @@ form {
     align-items: center;
     text-align: center;
 }
+
 .password-container {
     display: flex;
     align-items: center;
@@ -178,26 +205,30 @@ form {
     cursor: pointer;
     font-family: "Montserrat", sans-serif;
 }
+
 input {
-    background-color: #dbaaf856;
+    background-color: #ffffff56;
     border: none;
     border-radius: 20px;
     padding: 12px 15px;
-    margin: 8px 0;
+    margin: 15px ;
     width: 100%;
     color: #fff;
-    font-family: "Montserrat",sans-serif;
+    font-family: "Montserrat", sans-serif;
 }
+
 input::placeholder {
-    color: #fff; /* Cor do texto do placeholder */
-    opacity: 0.5; /* Ajusta a opacidade do placeholder para garantir que a cor seja visível */
-    font-family: "Montserrat",sans-serif;
+    color: #fff; 
+    opacity: 0.5;
+    font-family: "Montserrat", sans-serif;
 }
+
 button {
-    font-family: "Montserrat",sans-serif;
+    margin-bottom: 15px;
+    font-family: "Montserrat", sans-serif;
     border-radius: 20px;
-    border: 1px solid #dcaaf8;
-    background-color: #dcaaf8;
+    border: 1px solid #ffbd80;
+    background-color: #1b1b1b;
     color: #fff;
     font-size: 12px;
     font-weight: bold;
@@ -216,14 +247,22 @@ button:focus {
 }
 
 a {
-    color: #dcaaf8;
+    color: #fff9f9;
     text-decoration: none;  
     margin: 15px 0;
 }
+
+.welcome-message {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
+
 @media (max-width: 768px) {
     .container {
-        width: 90vw; /* Ajusta a largura para telas menores */
-        min-height: 70vh; /* Ajusta a altura para telas menores */
+        width: 90vw; 
+        min-height: 70vh; 
     }
 
     .login-container,
@@ -232,12 +271,50 @@ a {
     }
 
     .container.right-panel-active .login-container {
-        transform: none; /* Remove o movimento lateral */
+        transform: none; 
         opacity: 0;
     }
 
     .container.right-panel-active .register-container {
-        transform: none; /* Remove o movimento lateral */
+        transform: none;
         opacity: 1;
+    }
+
+    .logo-message-container {
+        position: absolute;
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: transform 0.6s ease-in-out, opacity 0.3s ease-in-out;
+        opacity: 1;
+        z-index: 1;
+    }
+
+    .container.right-panel-active .logo-message-container {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    .logo-message-container.left {
+        left: 50%;
+        transform: translateX(-100%);
+    }
+
+    .logo-message-container.right {
+        right: 50%;
+    }
+
+    .logo-message-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .logo-message-content .logo {
+        margin-bottom: 10px;
     }
 }
