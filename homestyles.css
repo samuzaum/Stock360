@@ -306,3 +306,39 @@ footer {
   opacity: 0;
   transform: translateY(-20px);
 }
+
+/* sobre.html start */
+div#sobre-content{
+  text-align: center;
+  top: 45%;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#sobre-content h1{
+  text-align: justify;
+  font-size: 4rem;
+  padding-bottom: 5px;
+}
+
+#sobre-content p{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: justify;
+  border-top: 2px solid #dbad75;
+  border-bottom: 2px solid #dbad75;
+  font-size: 2rem;
+}
+
+#sobre-content a{
+  padding-top: 12px;
+  float: left;
+  text-decoration: none;
+  font-size: 1.3rem;
+}
+
+#sobre-content a:hover{
+  text-decoration: underline 1px;
+}
+/* sobre.html end */
