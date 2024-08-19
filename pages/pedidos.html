@@ -9,9 +9,9 @@
         <br>
         <p>Quantidade</p>
         <div class="quantidade-pedidos">
-            <button><i class="bi bi-dash-lg"></i></button>
-            <input type="text" id="quantidade-pedidos-input">
-            <button><i class="bi bi-plus-lg"></i></button>
+            <button id="remover-pedidos" onclick="diminuirNumero()"><i class="bi bi-dash-lg"></i></button>
+            <input type="number" id="quantidade-pedidos-input" value="0">
+            <button id="adicionar-pedidos" onclick="aumentarNumero()"><i class="bi bi-plus-lg" ></i></button>
         </div>
         <br>
         <p>Observações</p>
@@ -20,3 +20,6 @@
         <input type="submit" name="salvar" id="salvar" value="Salvar">
     </form>
 </div>
+
+
+

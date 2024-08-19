@@ -339,12 +339,23 @@ footer {
 }
 .quantidade-pedidos {
   display: flex;
+  flex-direction: row;
+  justify-content: center;
+  
 }
 .quantidade-pedidos input {
-  width: 800px;
+  width: 330px;
+  margin-right: 0;
 }
-.quantidade-pedidos button {
+.quantidade-pedidos #adicionar-pedidos {
   width: 20px;
-  height: 30px;
-  border-radius: 10px;
+  height: 20px;
+  border-radius: 5px;
+  
 }
+.quantidade-pedidos #remover-pedidos {
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+}
+
