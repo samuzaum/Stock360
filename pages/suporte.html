@@ -1,4 +1,33 @@
 <div>
-    <h1>Suporte</h1>
-    <p>Precisa de ajuda? Entre em contato com o suporte técnico.</p>
+    <h1>Dúvidas Frequentes</h1>
+      <!-- Seção de Campo de Texto -->
+      <div class="input-section">
+        <input type="text" placeholder="Digite sua dúvida aqui...">
+    </div>
+    <div class="faq-section">
+        <div class="faq-item">
+            <h3>Como posso resetar minha senha?</h3>
+            <p>Para resetar sua senha, clique em "Esqueci minha senha" na página de login e siga as instruções.</p>
+        </div>
+        <div class="faq-item">
+            <h3>Como posso entrar em contato com o suporte?</h3>
+            <p>Você pode entrar em contato com o suporte através do email suporte@exemplo.com ou pelo telefone (11) 1234-5678.</p>
+        </div>
+        <div class="faq-item">
+            <h3>Quais métodos de pagamento vocês aceitam?</h3>
+            <p>Aceitamos cartões de crédito, PayPal e transferências bancárias.</p>
+        </div>
+        <div class="faq-item">
+            <h3>Como posso acompanhar meu pedido?</h3>
+            <p>Você pode acompanhar o status do seu pedido acessando a seção "Meus Pedidos" em sua conta.</p>
+        </div>
+    </div>
+    <script>
+        document.querySelectorAll('.faq-item h3').forEach(item => {
+            item.addEventListener('click', () => {
+                const content = item.nextElementSibling;
+                content.style.display = content.style.display === 'block' ? 'none' : 'block';
+            });
+        });
+    </script>
 </div>

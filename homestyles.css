@@ -112,6 +112,48 @@ aside {
   flex: 1;
 
 }
+.suporte-page h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 5vw;
+}
+.input-section {
+    margin-bottom: 20px;
+    text-align: center;
+}
+.input-section input[type="text"] {
+    width: 50%;
+    padding: 10px;
+    border: 1px solid #110f0f;
+    border-radius: 5px;
+    font-size: 16px;
+}
+.faq-section {
+    margin: 20px 0;
+    padding-top: 5vh;
+    padding: 7vh;
+}
+.faq-item {
+    background-color: white;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+.faq-item h3 {
+    margin: 0;
+    padding: 15px;
+    background-color: #f9f9f9;
+    cursor: pointer;
+}
+.faq-item p {
+    display: none;
+    padding: 15px;
+    border-top: 1px solid #ddd;
+    background-color: white;
+}
+.faq-item h3:hover {
+    background-color: #f1f1f1;
+}
 
 footer {
   background-color: #BE8a4A;
