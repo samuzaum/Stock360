@@ -16,49 +16,16 @@
                 <h1>Login</h1>
                 <input type="email" name="email" placeholder="Email" required />
                 <input type="password" id="password" name="senha" placeholder="Senha" required />
-                <button class="botao-entrar" type="submit">Entrar</button>
-                <span>Não tem uma conta? <a href="#" id="signUp">Cadastre-se</a></span>
-            </form>
-        </div>
-        <div class="form-container register-container">
-            <form id="registerForm" method="POST" action="register.php">
-                <h1>Cadastro</h1>
-                <input type="text" name="nome" placeholder="Nome" required />
-                <input type="email" name="email" placeholder="Email" required />
-                <input type="password" name="senha" placeholder="Senha" required />
-                <button type="submit">Cadastrar</button>
-                <span>Já tem uma conta? <a href="#" id="signIn">Entre</a></span>
+                <button type="submit">Entrar</button>
             </form>
         </div>
         <div class="logo-message-container right">
             <div class="logo-message-content">
-                <img src="./images/logo_preta.png" alt="Logo" class="logo"> <!-- Espaço para a logo -->
-                <div class="welcome-message">Seja bem-vindo!</div> <!-- Mensagem de boas-vindas -->
-            </div>
+             <img src="./images/logo_preta.png" alt="Logo" class="logo"> <!-- Espaço para a logo -->
+            <div class="welcome-message">Seja bem-vindo!</div> <!-- Mensagem de boas-vindas -->
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-        const container = document.getElementById('container');
-        const signUpButton = document.getElementById('signUp');
-        const signInButton = document.getElementById('signIn');
-
-        signUpButton.addEventListener('click', () => {
-            container.classList.add('right-panel-active');
-            setTimeout(() => {
-                document.querySelector('.logo-message-container').classList.remove('right');
-                document.querySelector('.logo-message-container').classList.add('left');
-            }, 300);
-        });
-
-        signInButton.addEventListener('click', () => {
-            container.classList.remove('right-panel-active');
-            setTimeout(() => {
-                document.querySelector('.logo-message-container').classList.remove('left');
-                document.querySelector('.logo-message-container').classList.add('right');
-            }, 300);
-        });
-    </script>
+    <script src="js/loginclick.js"></script>
 </body>
 </html>
-
