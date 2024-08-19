@@ -306,3 +306,45 @@ footer {
   opacity: 0;
   transform: translateY(-20px);
 }
+/*Css Do Davi - Pedidos*/
+.form-pedidos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 180px;
+  
+}
+.form-pedidos form {
+  background-color: #e4a456;
+  border-radius: 50px;
+  width: 386px;
+  height: 457px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.form-pedidos p {
+  text-align: center;
+  margin-bottom: 10px;
+}
+.form-pedidos input {
+  margin: 0 20px 20px 0;
+  width: 100%; 
+  text-align: center;
+}
+.form-pedidos #salvar {
+  width: 70px;
+  margin-left: 80%;
+  border-radius: 10px;
+}
+.quantidade-pedidos {
+  display: flex;
+}
+.quantidade-pedidos input {
+  width: 800px;
+}
+.quantidade-pedidos button {
+  width: 20px;
+  height: 30px;
+  border-radius: 10px;
+}
