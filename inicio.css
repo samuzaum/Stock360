@@ -1,27 +1,32 @@
-/* Estilo geral para o corpo do site */
-body {
-    font-family: Arial, sans-serif; /* Define a fonte padrão */
+
+body-inicio {
+    font-family: Arial, sans-serif; 
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0; /* Cor de fundo clara, ajuste conforme necessário */
+    background-color: #f0f0f0; 
   }
   
-  /* Estilo para o container principal */
+ 
   .container-inicio {
-    width: 80%; /* Largura do container, ajuste conforme necessário */
-    margin: 0 auto; /* Centraliza o container horizontalmente */
-    padding: 20px; /* Espaçamento interno do container */
+    width: 80%; 
+    margin: 0 auto; 
+    padding: 20px; 
   }
   
-  /* Estilo para o texto centralizado */
+  
   .text-center {
-    text-align: center; /* Centraliza o texto horizontalmente */
-    line-height: 1.6; /* Ajusta o espaçamento entre linhas do texto */
+    text-align: center; 
+    line-height: 1.6; 
   }
   
-  /* Estilo adicional para o espaçamento */
-  .spacing {
-    margin: 20px 0; /* Adiciona espaçamento acima e abaixo do elemento */
-    padding: 10px; /* Adiciona espaçamento interno ao redor do elemento */
+  
+.titulo espaco-inicio {
+    margin: 30px 0; 
   }
+  
+ 
+  .paragrafo espaco-inicio {
+    margin: 20px 0; 
+  }
+  
   
