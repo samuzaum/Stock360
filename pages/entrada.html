@@ -1,17 +1,17 @@
-<div>
-    <h1>Entrada</h1>
-    <br><br>
-    <div class="containerEntrada">
+<div class="clearfix">
+    <h1><br>Entradas</h1>
+    <br><br><br>
+    <div class="containerEntradaProduto">
         <form id="entrada" action="#" method="post">
             <h2>Crie um Produto</h2>
             <br>
 
-            <label for="nomeProduto"  placeholder="Nome do Produto">Nome do Produto</label>
-            <input type="text" name="nomeProduto" id="nomeProduto">
+            <input type="text" name="nomeProduto" id="nomeProduto" placeholder="Digite o nome do Produto">
+            <br>
             <br>
 
-            <label for="categoriaProduto">Categoria do Produto</label>
             <select name="categoriaProduto" id="categoriaProduto">
+                <option value="">Selecione a Categoria do Produto</option>
                 <option value="Categoria 1">Categoria 1</option>
                 <option value="Categoria 2">Categoria 2</option>
                 <option value="Categoria 3">Categoria 3</option>
@@ -19,51 +19,47 @@
                 <option value="Categoria 5">Categoria 5</option>
             </select>
             <br>
-
-        <label for="fornecedor">Fornecedor:</label>
-        <select name="fornecedor" id="fornecedor">
-            <option value="fornecedor1">Fornecedor 1</option>
-            <option value="fornecedor1">Fornecedor 2</option>
-            <option value="fornecedor1">Fornecedor 3</option>
-            <option value="fornecedor1">Fornecedor 4</option>
-            <option value="fornecedor1">Fornecedor 5</option>
-        </select>
-    </form>
-</div>
-            <label for="descricaoProduto">Descrição do Produto:</label><br>
-            <textarea name="descricaoProduto" id="descricaoProduto"></textarea>
             <br>
 
-            <label for="fornecedor">Fornecedor:</label>
             <select name="fornecedor" id="fornecedor">
+                <option value="">Selecione o Fornecedor</option>
                 <option value="fornecedor1">Fornecedor 1</option>
                 <option value="fornecedor1">Fornecedor 2</option>
                 <option value="fornecedor1">Fornecedor 3</option>
                 <option value="fornecedor1">Fornecedor 4</option>
                 <option value="fornecedor1">Fornecedor 5</option>
             </select>
+            <br>
+            <br>
+
+            <textarea name="descricaoProduto" id="descricaoProduto" placeholder="Digite a descrição do Produto"></textarea>
+            <br>
+
+            <input type="submit" value="Criar Produto" class="buttonCriarProduto">
         </form>
-        <br>
+
     </div>
         
     <div class="containerEntradaFornecedor">
         <h2>Crie um Fornecedor</h2>
             <br>
             
-            <label for="nomeFornecedor"  placeholder="Nome do Fornecedor">Nome do Fornecedor</label>
-            <input type="text" name="nomeFornecedor" id="nomeFornecedor">
+            <input type="text" name="nomeFornecedor" id="nomeFornecedor" placeholder="Digite o nome do Fornecedor">
+            <br>
             <br>
 
-            <label for="telefoneContato">Telefone para contato:</label>
-            <input type="text" name="telefoneContato" id="telefoneContato">
+            <input type="text" name="telefoneContato" id="telefoneContato" placeholder="Digite o telefone de Contato">
+            <br>
             <br>
 
-            <label for="emailContato">Email para contato:</label>
-            <input type="text" name="emailContato" id="emailContato">
+            <input type="text" name="emailContato" id="emailContato" placeholder="Digite o email de Contato">
+            <br>
             <br>
 
-            <label for="cnpjEmpresa">CNPJ da empresa</label>
-            <input type="text" name="cnpjEmpresa" id="cnpjEmpresa">
+            <input type="text" name="cnpjEmpresa" id="cnpjEmpresa" placeholder="Digite o CNPJ da Empresa">
+            
+            <input type="submit" value="Criar Fornecedor" class="buttonCriarFornecedor">
+
         </form>
     </div>     
 </div>
