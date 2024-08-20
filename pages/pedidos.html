@@ -2,3 +2,20 @@
     <h1>Pedidos</h1>
     <p>Gerencie seus pedidos e acompanhe o status de cada um.</p>
 </div>
+<div class="form-pedidos">
+    <form action="">
+        <p>Qual produto deseja?</p>
+        <input type="text" id="pesquisa-pedidos" placeholder="Pesquisar">
+        <br>
+        <p>Quantidade</p>
+        <div class="quantidade-pedidos">
+            <button id="remover-pedidos" onclick="diminuirNumero()"><i class="bi bi-dash-lg"></i></button>
+            <input type="number" id="quantidade-pedidos-input" value="0">
+            <button id="adicionar-pedidos" onclick="aumentarNumero()"><i class="bi bi-plus-lg" ></i></button>
+        </div>
+        <br>
+        <p>Observações</p>
+        <h1>Pedidos</h1>
+        <input type="submit" name="salvar" id="salvar" value="Salvar">
+    </form>
+</div>
