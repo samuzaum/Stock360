@@ -317,7 +317,7 @@ footer {
 .form-pedidos form {
   background-color: #e4a456;
   border-radius: 50px;
-  width: 386px;
+  max-width: 386px;
   height: 457px;
   display: flex;
   flex-direction: column;
@@ -358,4 +358,5 @@ footer {
   height: 20px;
   border-radius: 5px;
 }
+
 
