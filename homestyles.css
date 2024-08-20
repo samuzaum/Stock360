@@ -434,3 +434,17 @@ footer {
     border-radius: 5px;
   }
 /*Css Do Davi - Pedidos*/
+/*fornecedor*/
+  .select-grafico{
+    text-align: center;
+    margin-top: 1vw;
+    background-color: #c8baab7c;
+    color: #000000;
+    border: solid 2px #be8a4a67 ;
+    width: 10vw;
+    height: 2vw;
+    border-radius: 12px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
+  }
+/*fornecedor*/
