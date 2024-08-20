@@ -1,4 +1,101 @@
 <div>
-    <h1>Fornecedores</h1>
-    <p>Aqui você pode ver a lista de fornecedores e entrar em contato com eles.</p>
+    <div>
+        <h1>Fornecedores</h1>
+        <select id="dataSelector">
+            <option value="1">Parafusos</option>
+            <option value="2">Canetas</option>
+            <option value="3">Anões</option>
+        </select>
+        <canvas id="myChart"></canvas>
+    </div>
+    <script>
+        var ctx = document.getElementById('myChart').getContext('2d');
+        var datasets = {
+            1: {
+                label: 'Parafusos',
+                data: [12, 19, 3, 5],
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)'
+                ],
+                borderWidth: 1
+            },
+            2: {
+                label: 'Canetas',
+                data: [20, 15, 8, 12],
+                backgroundColor: [
+                    'rgba(255, 159, 64, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(255, 99, 132, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(255, 159, 64, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(255, 99, 132, 1)'
+                ],
+                borderWidth: 1
+            },
+            3: {
+                label: 'Anões',
+                data: [7, 18, 5, 13],
+                backgroundColor: [
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(75, 192, 192, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(75, 192, 192, 1)'
+                ],
+                borderWidth: 1
+            }
+        };
+
+        var labels = {
+            1: ['pequeno', 'medio', 'grande', 'enorme'],
+            2: ['azul', 'vermelha', 'amarela?', 'sla mano q cor tem a caneta'],
+            3: ['pequeno', 'pequeno', 'pequeno', 'pequeno']
+        };
+
+        // Cria o gráfico
+        var myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: labels[1], 
+                datasets: [datasets[1]] 
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+        // a mano essa merda da update pra quando troca la no select
+        function updateChart(dataSet) {
+   
+            myChart.data.labels = labels[dataSet];
+            myChart.data.datasets[0] = datasets[dataSet];
+            myChart.update();
+        }
+        document.getElementById('dataSelector').addEventListener('change', function() {
+            var selectedValue = this.value;
+            updateChart(selectedValue);
+        });
+    </script>
 </div>
