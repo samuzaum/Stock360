@@ -118,17 +118,37 @@ aside {
     margin-bottom: 5vw;
 }
 .input-section {
-    margin-bottom: 20px;
+    margin-bottom: 50px;
     text-align: center;
+    
 }
 .input-section input[type="text"] {
-    width: 50%;
+    margin-bottom: 15px;
+    text-align: center;
+    width: 30%;
     padding: 10px;
     border: 1px solid #110f0f;
-    border-radius: 5px;
-    font-size: 16px;
+    border-radius: 5px 10px;
+    font-size: 18px;
 }
+button {
+ 
+  margin-bottom: 15px;
+  font-family: "Montserrat", sans-serif;
+  border: 1px solid #cabdb1;
+  background-color: #1b1b1b;
+  color: #fff;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 8px 25px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: transform 80ms ease-in;
+  border-radius: 5px 15px;
+}
+
 .faq-section {
+    
     margin: 20px 0;
     padding-top: 5vh;
     padding: 7vh;
@@ -140,10 +160,16 @@ aside {
     border-radius: 5px;
 }
 .faq-item h3 {
+    
+    text-align: center;
     margin: 0;
     padding: 15px;
     background-color: #f9f9f9;
     cursor: pointer;
+}
+p{
+  
+  text-align: center;
 }
 .faq-item p {
     display: none;
