@@ -102,15 +102,25 @@ aside {
   transition: background-color 0.3s ease, color 0.3s ease;
   overflow-wrap: break-word;
 }
-
-.asidelink:hover {
+.asidelink:hover{
   background-color: #BE8a4A;
   color: #fff;
 }
-
+.asidelink.active {
+  background-color: #BE8a4A;
+  color: #fff;
+}
  main { /* PROIBIDO MEXER */
   flex: 1;
 
+}
+#main-content {
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+#main-content.fade {
+  opacity: 0;
 }
 
 footer {
