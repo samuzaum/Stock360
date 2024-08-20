@@ -1,13 +1,12 @@
 <div>
     <div>
-        <h1>Fornecedores</h1>
         <select id="dataSelector">
             <option value="1">Parafusos</option>
             <option value="2">Canetas</option>
             <option value="3">Anões</option>
         </select>
-        <canvas id="myChart"></canvas>
-    </div>
+        <canvas id=myChart style="height:75vh; width:80vw">
+    </div> 
     <script>
         var ctx = document.getElementById('myChart').getContext('2d');
         var datasets = {
@@ -70,7 +69,6 @@
             3: ['pequeno', 'pequeno', 'pequeno', 'pequeno']
         };
 
-        // Cria o gráfico
         var myChart = new Chart(ctx, {
             type: 'bar',
             data: {
