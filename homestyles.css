@@ -390,7 +390,7 @@ footer {
     
   }
   .form-pedidos form {
-    background-color: #e4a456;
+    background-color: rgb(192, 189, 189);
     border-radius: 50px;
     width: 386px;
     height: 457px;
@@ -398,40 +398,67 @@ footer {
     flex-direction: column;
     justify-content: center;
   }
-  .form-pedidos p {
+  .form-pedidos p, h1, h2, h3, h4 {
     text-align: center;
     margin-bottom: 10px;
   }
   .form-pedidos input {
-    margin: 0 20px 20px 0;
-    width: 100%; 
     text-align: center;
-  }
-  .form-pedidos #salvar {
-    width: 70px;
-    margin-left: 80%;
     border-radius: 10px;
+  }
+  .pesquisa-pedidos{
+    display: flex;
+    justify-content: center;
+    margin: 0;
+  }
+  .pesquisa-pedidos input {
+    width: 300px;
+    height: 30px;
+    margin-left: 30px;
+  }
+  .pesquisa-pedidos button {
+    padding: 10px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    background: none;
+  }
+  .limpar-salvar{
+    display: flex;
+    justify-content: flex-end;
+  }
+  .limpar-salvar-button {
+    padding: 2px;
   }
   .quantidade-pedidos {
     display: flex;
-    flex-direction: row;
+    align-items: center;
     justify-content: center;
-
   }
+  
   .quantidade-pedidos input {
-    width: 330px;
-    margin-right: 0;
+    width: 200px;
+    border-radius: 10px;
   }
   .quantidade-pedidos #adicionar-pedidos {
-    width: 20px;
-    height: 20px;
-    border-radius: 5px;
-
+    border: none;
+    border-radius: 50%;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-left: 5px;
   }
   .quantidade-pedidos #remover-pedidos {
-    width: 20px;
-    height: 20px;
-    border-radius: 5px;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    margin-top: 10px;
+    margin-right: 5px;
   }
 /*Css Do Davi - Pedidos*/
 /*fornecedor*/

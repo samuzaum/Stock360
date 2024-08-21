@@ -22,3 +22,9 @@ function diminuirNumero() {
     quantidadeInput.value = quantidadeAtual;
     }
 }
+
+function limparFormulario() {
+   document.querySelector('.pesquisa-pedidos input').value = '';
+   document.getElementById('quantidade-pedidos-input').value = 0;
+   document.getElementById('observacoes-pedidos').value = '';
+}
