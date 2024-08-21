@@ -4,20 +4,25 @@
 </div>
 <div class="form-pedidos">
     <form action="">
-        <p>Qual produto deseja?</p>
-        <input type="text" id="pesquisa-pedidos" placeholder="Pesquisar">
+        <div class="pesquisa-pedidos-container">
+            <p>Qual produto deseja?</p>
+            <div class="pesquisa-pedidos">
+                <input type="text"  placeholder="Pesquisar">
+                <i class="bi bi-search"></i>
+            </div>
+        </div>
         <br>
         <p>Quantidade</p>
         <div class="quantidade-pedidos">
-            <button id="remover-pedidos" onclick="diminuirNumero()"><i class="bi bi-dash-lg"></i></button>
+            <button id="remover-pedidos" onclick="diminuirNumero()" type="button"><i class="bi bi-dash-lg"></i></button>
             <input type="number" id="quantidade-pedidos-input" value="0">
-            <button id="adicionar-pedidos" onclick="aumentarNumero()"><i class="bi bi-plus-lg" ></i></button>
+            <button id="adicionar-pedidos" onclick="aumentarNumero()" type="button"><i class="bi bi-plus-lg" ></i></button>
         </div>
         <br>
         <p>Observações</p>
         <textarea name="observacoes-pedidos" id="observacoes-pedidos" cols="50" rows="2"> </textarea>
         <br>
-        <h1>Pedidos</h1>
         <input type="submit" name="salvar" id="salvar" value="Salvar">
     </form>
+
 </div>
