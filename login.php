@@ -1,43 +1,43 @@
 <?php
 // Conectar ao banco de dados
-$conn = new mysqli('localhost', 'root', '', 'e_commerce');
-
-// Verificar conexão
+$conn = new mysqli('localhost', 'root', '', 'stock360');
 if ($conn->connect_error) {
     die("Conexão falhou: " . $conn->connect_error);
 }
 
-// Pegar os dados do formulário
+session_start();
+
 $email = $_POST['email'];
 $senha = $_POST['senha'];
 
-// Buscar o usuário no banco de dados
-$sql = "SELECT id, senha, is_admin FROM usuarios WHERE email='$email'";
-$result = $conn->query($sql);
+$stmt = $conn->prepare("SELECT id, senha, is_admin FROM usuarios WHERE email = ?");
+$stmt->bind_param('s', $email);
+$stmt->execute();
+$result = $stmt->get_result();
 
 if ($result->num_rows > 0) {
     // Verificar a senha
     $row = $result->fetch_assoc();
     if (password_verify($senha, $row['senha'])) {
-        // Iniciar a sessão
-        session_start();
         $_SESSION['logged_in'] = true;
+        $_SESSION['user_id'] = $row['id'];
 
         // Verificar se o usuário é um administrador
         if ($row['is_admin'] == 1) {
             $_SESSION['admin_logged_in'] = true;
-            echo "admin"; // Indica que é um admin
+            echo "admin"; 
         } else {
             $_SESSION['admin_logged_in'] = false;
-            echo "user"; // Indica que é um usuário normal
+            echo "user"; 
         }
     } else {
-        echo "Senha incorreta.";
+        echo "Credenciais inválidas.";
     }
 } else {
-    echo "Nenhum usuário encontrado com este email.";
+    echo "Credenciais inválidas.";
 }
 
 // Fechar a conexão
+$stmt->close();
 $conn->close();
 ?>
