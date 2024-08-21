@@ -310,15 +310,15 @@ footer {
 /* sobre.html start */
 div#sobre-content{
   text-align: center;
-  top: 45%;
+  top: 35%;
   position: absolute;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
 #sobre-content h1{
-  text-align: justify;
-  font-size: 4rem;
+  text-align: center;
+  font-size: 3rem;
   padding-bottom: 5px;
 }
 
@@ -328,7 +328,7 @@ div#sobre-content{
   text-align: justify;
   border-top: 2px solid #dbad75;
   border-bottom: 2px solid #dbad75;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 #sobre-content a{
@@ -341,4 +341,22 @@ div#sobre-content{
 #sobre-content a:hover{
   text-decoration: underline 1px;
 }
-/* sobre.html end */
+/* Css da proposta e metodo */
+#proposta-metodo{
+  display: inline-flex;
+  text-align: center;
+  top: 65%;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  gap: 4rem;
+  margin-top: 1.5rem;
+}
+
+#proposta-metodo h2{
+  font-size: 1.5rem;
+}
+
+#proposta-metodo p{
+  font-size: 1.2rem;
+}
