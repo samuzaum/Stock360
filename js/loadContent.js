@@ -18,12 +18,12 @@ $(document).ready(function(){
 
     // Carrega a página correspondente ao estado ou a inicial
     loadPage(page);
-    $(".asidelink[data-page='" + page + "']").addClass("active");
+    $(".nav-link[data-page='" + page + "']").addClass("active");
 
     // Adicionar a classe 'active' ao link clicado e carregar a página
-    $(".asidelink").click(function(e){
+    $(".nav-link").click(function(e){
         e.preventDefault();
-        $(".asidelink").removeClass("active");
+        $(".nav-link").removeClass("active");
         $(this).addClass("active");
 
         var page = $(this).data("page");
@@ -34,8 +34,8 @@ $(document).ready(function(){
     window.onpopstate = function(event) {
         if (event.state && event.state.page) {
             loadPage(event.state.page);
-            $(".asidelink").removeClass("active");
-            $(".asidelink[data-page='" + event.state.page + "']").addClass("active");
+            $(".nav-link").removeClass("active");
+            $(".nav-link[data-page='" + event.state.page + "']").addClass("active");
         }
     };
 });

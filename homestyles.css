@@ -40,7 +40,17 @@ body {
     margin: 0;
     margin-right: 3vw;
   }
-
+  .custom-nav {
+    background-color: #BE8a4A; /* Cor desejada */
+    padding: 1rem;
+}
+.custom-nav .nav-link {
+    color: #fff; /* Cor do texto dos links */
+    font-size: 1.1rem;
+}
+.custom-nav .nav-link:hover {
+    color: #f8f9fa; /* Cor do texto dos links ao passar o mouse */
+}
   .main-nav ul li a{
     display: flex;
     align-items: center;
