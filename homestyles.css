@@ -408,7 +408,7 @@ div#sobre-content{
   margin: 20px auto; 
   padding: 1.25rem;
   border: 1px solid #BE8a4A; 
-  border-radius: 0.5rem; 
+  border-radius: 1.2rem; 
   background-color: #FFFFFF; 
   box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1); 
   box-sizing: border-box;
@@ -420,6 +420,7 @@ div#sobre-content{
   color: #333333; 
   margin-bottom: 1.25rem; 
   font-size: 1.5rem;
+  font-weight: bold;
 }
 
 .entrada-label {
@@ -436,7 +437,7 @@ div#sobre-content{
   padding: 0.625rem; 
   margin-bottom: 1rem; 
   border: 1px solid #cccccc; 
-  border-radius: 0.25rem;
+  border-radius: 0.7rem;
   background-color: #f9f9f9; 
   font-size: 1rem;
   box-sizing: border-box; 
@@ -447,7 +448,7 @@ div#sobre-content{
 .entrada-button {
   padding: 0.75rem 1.25rem; 
   border: none;
-  border-radius: 0.25rem; 
+  border-radius: 0.7rem; 
   background-color: #BE8a4A; 
   color: #FFFFFF; 
   cursor: pointer;
