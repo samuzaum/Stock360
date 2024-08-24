@@ -14,29 +14,56 @@
 <body>
     <header>
         <div class="header-content">
-          <figure>
-            <img src="src/oglogo.svg" alt="logo" class="mainlogo">
-          </figure> 
-          <nav class="main-nav">
-            <ul>
-              <li><a href=""><i class="bi bi-person-circle" style="font-size: 2vw;"></i></a></li>
-            </ul>
-          </nav>
-        </div>
-      </header>
-    <div class="container">
-        <aside>
-            <div class="asidediv">
-                <a href="#" class="asidelink" data-page="inicio">Inicio</a>
-                <a href="#" class="asidelink" data-page="entrada">Entrada</a>
-                <a href="#" class="asidelink" data-page="produtos">Produtos</a>
-                <a href="#" class="asidelink" data-page="pedidos">Pedidos</a>
-                <a href="#" class="asidelink" data-page="fornecedores">Fornecedores</a>
-                <a href="#" class="asidelink" data-page="suporte">Suporte</a>
-                <a href="#" class="asidelink" data-page="sobre">Sobre</a>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+              <a class="navbar-brand" href="#">
+                <img src="src/oglogo.svg" alt="logo" class="mainlogo">
+              </a>
+              <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-end d-lg-none">
+                <li><a class="dropdown-item" href="#" data-page="inicio">Inicio</a></li>
+                <li><a class="dropdown-item" href="#" data-page="entrada">Entrada</a></li>
+                <li><a class="dropdown-item" href="#" data-page="produtos">Produtos</a></li>
+                <li><a class="dropdown-item" href="#" data-page="pedidos">Pedidos</a></li>
+                <li><a class="dropdown-item" href="#" data-page="fornecedores">Fornecedores</a></li>
+                <li><a class="dropdown-item" href="#" data-page="suporte">Suporte</a></li>
+                <li><a class="dropdown-item" href="#" data-page="sobre">Sobre</a></li>
+                <li><a class="dropdown-item" href="#"><i class="bi bi-person-circle" style="font-size: 2vw;"></i></a></li>
+              </ul>
+              <div class="collapse navbar-collapse d-none d-lg-flex">
+                <ul class="navbar-nav ms-auto">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#" data-page="inicio">Inicio</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#" data-page="entrada">Entrada</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#" data-page="produtos">Produtos</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#" data-page="pedidos">Pedidos</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#" data-page="fornecedores">Fornecedores</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#" data-page="suporte">Suporte</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#" data-page="sobre">Sobre</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="bi bi-person-circle" style="font-size: 2vw;"></i></a>
+                  </li>
+                </ul>
+              </div>
             </div>
-        </aside>
-        <div id="notification" class="notification hidden">Produto adicionado</div>
+          </nav>
+    </header>
+    <div class="container">
         <main id="main-content"> <!-- PROIBIDO MEXER NA CLASSE -->
         </main>
     </div>

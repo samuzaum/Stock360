@@ -1,17 +1,59 @@
 <div>
-    <div class="containerEntradaProduto">
-        <form id="entrada" action="#" method="post">
-            <h1>Entrada</h1>
-                <input type="" name="" placeholder= ""required />
-                <input type="" name="" placeholder= ""required />
-                <input type="" name="" placeholder= ""required />
-                <input type="" name="" placeholder= ""required />
-                <input type="" name="" placeholder= ""required />
-                <input type="" name="" placeholder= ""required />
-                <input type="" name="" placeholder= ""required />
-                <input type="" name="" placeholder= ""required />
-                <button type="submit">Entrar</button>
-        <label for=""></label>
+    <div class="form-container-entrada">
+        <h1>Cadastro de Entrada de Produtos</h1>
+        <form action="/cadastrar-produto" method="post">
+            <div class="form-row">
+                <div class="form-column">
+                    <label for="nome" class="entrada-label">Nome do Produto:</label>
+                    <input type="text" id="nome" name="nome" class="entrada-input" required>
+                </div>
+                <div class="form-column">
+                    <label for="categoria" class="entrada-label">Categoria:</label>
+                    <input type="text" id="categoria" name="categoria" class="entrada-input" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-column">
+                    <label for="quantidade" class="entrada-label">Quantidade em Estoque:</label>
+                    <input type="number" id="quantidade" name="quantidade" class="entrada-input" required>
+                </div>
+                <div class="form-column">
+                    <label for="unidade" class="entrada-label">Unidade de Medida:</label>
+                    <select id="unidade" name="unidade" class="entrada-select" required>
+                        <option value="unidade">Unidade</option>
+                        <option value="kg">Kilograma</option>
+                        <option value="litro">Litro</option>
+                        <option value="m">Metro</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-column">
+                    <label for="dimensao" class="entrada-label">Dimensão:</label>
+                    <input type="text" id="dimensao" name="dimensao" class="entrada-input">
+                </div>
+                <div class="form-column">
+                    <label for="descricao" class="entrada-label">Descrição Breve:</label>
+                    <textarea id="descricao" name="descricao" class="entrada-textarea" rows="1"></textarea>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-column">
+                    <label for="validade" class="entrada-label">Data de Validade/Reposição:</label>
+                    <input type="date" id="validade" name="validade" class="entrada-input">
+                </div>
+                <div class="form-column">
+                    <label for="fornecedor" class="entrada-label">Fornecedor/Marca:</label>
+                    <input type="text" id="fornecedor" name="fornecedor" class="entrada-input">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-column">
+                    <label for="preco" class="entrada-label">Preço:</label>
+                    <input type="text" id="preco" name="preco" class="entrada-input" required>
+                </div>
+            </div>
+            <button type="submit" class="entrada-button">Cadastrar Produto</button>
         </form>
     </div>
     <!-- nome do produto, codigo do produto , categoria, quantidade em estoque, unidades de medidas , dimensão, descrição breve , data de validade/reposição, fornecedor/marca,preço, -->

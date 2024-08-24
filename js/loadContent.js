@@ -21,21 +21,26 @@ $(document).ready(function(){
     $(".asidelink[data-page='" + page + "']").addClass("active");
 
     // Adicionar a classe 'active' ao link clicado e carregar a página
-    $(".asidelink").click(function(e){
+    function handleLinkClick(e) {
         e.preventDefault();
-        $(".asidelink").removeClass("active");
+        $(".nav-link, .dropdown-item").removeClass("active");
         $(this).addClass("active");
 
         var page = $(this).data("page");
-        loadPage(page);
-    });
+        if (page) {
+            loadPage(page);
+        }
+    }
+
+    // Lida com o clique dos links da navbar e dropdown
+    $(".nav-link, .dropdown-item").click(handleLinkClick);
 
     // Lida com o botão de voltar do navegador
     window.onpopstate = function(event) {
         if (event.state && event.state.page) {
             loadPage(event.state.page);
-            $(".asidelink").removeClass("active");
-            $(".asidelink[data-page='" + event.state.page + "']").addClass("active");
+            $(".nav-link, .dropdown-item").removeClass("active");
+            $(".nav-link[data-page='" + event.state.page + "'], .dropdown-item[data-page='" + event.state.page + "']").addClass("active");
         }
     };
 });
