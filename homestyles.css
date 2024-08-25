@@ -244,11 +244,11 @@ div#sobre-content{
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 180px;
+  
   
 }
 .form-pedidos form {
-  background-color: rgb(192, 189, 189);
+  border: 2px solid #BE8a4A;
   border-radius: 50px;
   width: 386px;
   height: 457px;
@@ -280,6 +280,7 @@ div#sobre-content{
   display: flex;
   align-items: center;
   background: none;
+  border: none;
 }
 .limpar-salvar{
   display: flex;
@@ -287,7 +288,7 @@ div#sobre-content{
 }
 .limpar-salvar-button {
   padding: 2px;
-  background-color: #651d1c;
+  background-color: #BE8a4A;
   color: rgba(255, 255, 255, 0.815);
   margin: 5px;
 }
@@ -310,7 +311,7 @@ div#sobre-content{
   align-items: center;
   margin-top: 10px;
   margin-left: 5px;
-  background-color: #651d1c;
+  
 }
 .quantidade-pedidos #remover-pedidos {
   border: none;
@@ -321,7 +322,7 @@ div#sobre-content{
   padding: 5px;
   margin-top: 10px;
   margin-right: 5px;
-  background-color: #651d1c;
+  
 }
 /*Css Do Davi - Pedidos*/
 /*fornecedor*/
