@@ -309,6 +309,8 @@ footer {
 
 /* sobre.html start */
 div#sobre-content{
+  max-width: 858px;
+  display: inline-block;
   text-align: center;
   top: 35%;
   position: absolute;
@@ -343,6 +345,7 @@ div#sobre-content{
 }
 /* Css da proposta e metodo */
 #proposta-metodo{
+  max-width: 850px;
   display: inline-flex;
   text-align: center;
   top: 65%;
@@ -359,4 +362,25 @@ div#sobre-content{
 
 #proposta-metodo p{
   font-size: 1.2rem;
+}
+/* CSS para responsividade */
+
+@media (max-width: 1340px){
+  #proposta-metodo {
+    margin-top: 6rem;
+  }
+}
+
+@media(max-width: 1040px){
+  #proposta-metodo {
+    margin-top: 10rem;
+  }
+}
+
+@media (max-width: 800px) {
+  #sobre-content {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+  }
 }
