@@ -9,7 +9,7 @@
 
         <h4>Qual produto deseja?</h4>
         <div class="pesquisa-pedidos">
-            <input type="text"  placeholder="Pesquisar">
+            <input type="text" placeholder="Pesquisar">
             <button><i class="bi bi-search"></i></button>
         </div>
         <h4>Quantidade</h4>
@@ -17,6 +17,10 @@
             <button id="remover-pedidos" onclick="diminuirNumero()" type="button"><i class="bi bi-dash-lg"></i></button>
             <input type="number" id="quantidade-pedidos-input" value="0" min="0">
             <button id="adicionar-pedidos" onclick="aumentarNumero()" type="button"><i class="bi bi-plus-lg" ></i></button>
+        </div>
+        <div class="valor-pedidos">
+            <h4>Valor do Pedido</h4>
+            <input type="text" name="valor-pedidos-input" id="valor-pedidos-input" value="R$">
         </div>
         <h4>Observações</h4>
         <textarea name="observacoes-pedidos" id="observacoes-pedidos" cols="50" rows="2"> </textarea>
