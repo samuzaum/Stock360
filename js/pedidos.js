@@ -26,4 +26,28 @@ function limparFormulario() {
     document.querySelector('.pesquisa-pedidos input').value = '';
     document.getElementById('quantidade-pedidos-input').value = 0;
     document.getElementById('observacoes-pedidos').value = '';
+    document.getElementById('nome-pedidos').value = '';
+ }
+
+ function notificacaoPedidos(event){
+    event.preventDefault();
+    let div = document.getElementById('notificacao-pedidos')
+    let paragrafo = document.createElement('p');
+    paragrafo.textContent = 'Salvo com sucesso!'
+    div.innerHTML = '';
+    div.appendChild(paragrafo);
+    
+    div.style.display = 'block'
+    div.classList.add('mostrar');
+
+    setTimeout(() => {
+        div.classList.remove('mostrar');
+        div.classList.add('esconder');
+    }, 2000);
+    
+    setTimeout(() => {
+        div.classList.remove('esconder');
+        div.style.display = 'none';
+    }, 2500); 
+
  }

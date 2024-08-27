@@ -244,12 +244,11 @@ div#sobre-content{
   display: flex;
   justify-content: center;
   align-items: center;
-  
+  height: 100%;
   
 }
 .form-pedidos form {
   border: 2px solid #BE8a4A;
-  max-width: 90%; 
   margin: 20px auto; 
   padding: 1.25rem;
   border: 1px solid #BE8a4A; 
@@ -257,25 +256,33 @@ div#sobre-content{
   background-color: #FFFFFF; 
   box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1); 
   box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
 }
 .form-pedidos p, h1, h2, h3, h4 {
   text-align: center;
   margin-bottom: 10px;
 }
 .form-pedidos input {
-  text-align: center;
+  width: 100%;
+}
+.form-pedidos label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #333333; 
+  font-weight: bold; 
   
 }
 .pesquisa-pedidos{
   display: flex;
   justify-content: center;
   margin: 0;
+  
 }
-.pesquisa-pedidos input {
-  width: 300px;
-  height: 30px;
-  margin-left: 30px;
+.pesquisa-pedidos input{
+  text-align: center;
 }
+
 .pesquisa-pedidos button {
   padding: 10px;
   height: 30px;
@@ -299,9 +306,16 @@ div#sobre-content{
   align-items: center;
   justify-content: center;
 }
+.quantidade-pedidos label {
+  margin-bottom: 0;
+  display: block;
+  text-align: end;
+  
+}
 
 .quantidade-pedidos input {
   width: 100%;
+  text-align: center;
 }
 .quantidade-pedidos #adicionar-pedidos {
   border: none;
@@ -310,7 +324,6 @@ div#sobre-content{
   display: flex;
   justify-content: center;
   align-items:flex-start;
-  margin-top: 10px;
   margin-left: 5px;
   background: none;
   
@@ -323,7 +336,6 @@ div#sobre-content{
   justify-content: center;
   align-items: flex-start;
   padding: 5px;
-  margin-top: 10px;
   margin-right: 5px;
   background: none;
   
@@ -332,6 +344,68 @@ div#sobre-content{
   width: 100%;
   text-align: start;
 }
+#notificacao-pedidos {
+  background-color: green;
+  width: 180px;
+  height: 30px;
+  display: none;
+  color: white;
+  text-align: center;
+  line-height: 30px;
+  border-radius: 5px;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+#notificacao-pedidos .mostrar {
+  display: block;
+  opacity: 1;
+}
+
+#notificacao-pedidos .esconder {
+  opacity: 0;
+}
+@media (max-width: 768px) {
+  .form-pedidos form {
+    width: 90%; /* Ajustar a largura do formulário em telas menores */
+    padding: 1rem;
+  }
+
+  .limpar-salvar {
+    justify-content: center;
+  }
+
+  .pesquisa-pedidos {
+    flex-direction: column;
+  }
+
+  .pesquisa-pedidos button {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .quantidade-pedidos {
+    flex-direction: column;
+  }
+
+  .quantidade-pedidos input {
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .form-pedidos form {
+    width: 100%; /* Ajustar a largura para dispositivos muito pequenos */
+  }
+
+  .limpar-salvar-button {
+    width: 100%; /* Tornar os botões maiores em telas pequenas */
+    padding: 10px;
+  }
+}
+
 /*Css Do Davi - Pedidos*/
 /*fornecedor*/
   .select-grafico{
