@@ -36,7 +36,7 @@ body::-webkit-scrollbar {
 
   .navbar-toggler {
     position: relative;
-    z-index: 1050;
+    z-index: 1050 ;
   }
 
   .navbar {
@@ -87,6 +87,7 @@ body::-webkit-scrollbar {
 .container {
   display: flex;
   flex: 1;
+
 }
  main { /* PROIBIDO MEXER */
   flex: 1;
