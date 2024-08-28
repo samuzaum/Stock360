@@ -1,34 +1,35 @@
-<div id="notificacao-pedidos">
+    <div class="pai-notificacao-pedidos">
+        <div id="notificacao-pedidos">
+        </div>
+    </div>
+    <div class="form-pedidos">
+        <form action="">
+            <div>   
+                <h1>Retirada do Produto</h1>
+            </div>
+            <label for="">Nome do Funcionário</label>
+            <input type="text" name="nome-pedidos" id="nome-pedidos">
+            <label class="textcenter" for="">Qual produto deseja retirar?</label>
+            <div class="pesquisa-pedidos">
+                <input type="text" placeholder="Pesquisar">
+                <button type="submit" name="pesquisa-pedidos"><i class="bi bi-search"></i></button>
+            </div>
+            <label class="textcenter" for="">Quantidade</label>
+            <div class="quantidade-pedidos">
+                <button id="remover-pedidos" onclick="diminuirNumero()" type="button"><i class="bi bi-dash-lg"></i></button>
+                <input type="number" id="quantidade-pedidos-input" value="0" min="0">
+                <button id="adicionar-pedidos" onclick="aumentarNumero()" type="button"><i class="bi bi-plus-lg" ></i></button>
+            </div>
+            <div class="valor-pedidos">
+                <label class="textcenter" for="">Valor do Produto</label>
+                <input type="text" name="valor-pedidos-input" id="valor-pedidos-input" value="R$" readonly>
+            </div>
+                <label class="textcenter" for="">Observações</label>
+            <textarea name="observacoes-pedidos" id="observacoes-pedidos" cols="50" rows="2"> </textarea>
+            <div class="limpar-salvar">
+                <input type="button" name="limpar" id="limpar" class="limpar-salvar-button" value="Limpar" onclick="limparFormulario()">
+                <input type="submit" name="salvar" id="salvar" value="Salvar" class="limpar-salvar-button" onclick="notificacaoPedidos(event)">
+            </div>
+        </form>
         
-</div>
-<div class="form-pedidos">
-    <form action="">
-        <div>   
-            <h1>Retirada</h1>
-        </div>
-        <label for="">Nome do Funcionário</label>
-        <input type="text" name="nome-pedidos" id="nome-pedidos">
-        <label for="">Qual produto deseja retirar?</label>
-        <div class="pesquisa-pedidos">
-            <input type="text" placeholder="Pesquisar">
-            <button type="submit" name="pesquisa-pedidos"><i class="bi bi-search"></i></button>
-        </div>
-        <label for="">Quantidade</label>
-        <div class="quantidade-pedidos">
-            <button id="remover-pedidos" onclick="diminuirNumero()" type="button"><i class="bi bi-dash-lg"></i></button>
-            <input type="number" id="quantidade-pedidos-input" value="0" min="0">
-            <button id="adicionar-pedidos" onclick="aumentarNumero()" type="button"><i class="bi bi-plus-lg" ></i></button>
-        </div>
-        <div class="valor-pedidos">
-            <label for="">Valor do Produto</label>
-            <input type="text" name="valor-pedidos-input" id="valor-pedidos-input" value="R$">
-        </div>
-            <label for="">Observações</label>
-        <textarea name="observacoes-pedidos" id="observacoes-pedidos" cols="50" rows="2"> </textarea>
-        <div class="limpar-salvar">
-            <input type="button" name="limpar" id="limpar" class="limpar-salvar-button" value="Limpar" onclick="limparFormulario()">
-            <input type="submit" name="salvar" id="salvar" value="Salvar" class="limpar-salvar-button" onclick="notificacaoPedidos(event)">
-        </div>
-    </form>
-    
-</div>
+    </div>
