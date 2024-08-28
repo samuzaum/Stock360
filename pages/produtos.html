@@ -5,7 +5,7 @@
         </div>
         <div class="card-body">
             <div class="table-responsive">
-                <table class="table table-bordered" id="produtos-table" width="100%" cellspacing="0">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
                         <tr>
                             <th>Nome</th>
@@ -33,26 +33,59 @@
                         </tr>
                     </tfoot>
                     <tbody>
-                        <!-- Inclui com o script no fim do codigo =) -->
+                        <!-- O conteúdo será adicionado via AJAX -->
                     </tbody>
                 </table>
             </div>
         </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Inclua jQuery primeiro -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+
+    <!-- Depois, inclua os plugins do jQuery -->
+    <script src="vendor/datatables/jquery.dataTables.min.js"></script>
+    <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
+
+    <!-- Por fim, inclua seus scripts customizados -->
+    <script src="js/demo/datatables-demo.js"></script>
+
     <script>
-        // Carrega os produtos ao abrir a página
         $(document).ready(function() {
-            $.ajax({
-                url: 'produtos-registrados.php', 
-                method: 'GET',
-                success: function(response) {
-                    $('#produtos-table tbody').html(response); 
-                },
-                error: function() {
-                    alert('Erro ao carregar os produtos.');
-                }
-            });
+            function carregarProdutos() {
+                $.ajax({
+                    url: 'produtos-registrados.php',
+                    method: 'GET',
+                    success: function(response) {
+                        console.log(response); // Verifica a resposta no console
+
+                        // Se DataTables já estiver inicializado, destrua-o
+                        if ($.fn.DataTable.isDataTable('#dataTable')) {
+                            $('#dataTable').DataTable().clear().destroy();
+                        }
+
+                        // Atualiza o conteúdo da tabela
+                        $('#dataTable tbody').html(response);
+
+                        // Inicializa o DataTables
+                        $('#dataTable').DataTable({
+                            paging: true,
+                            searching: true,
+                            order: [[0, 'asc']],
+                            pageLength: 10, // Número padrão de itens por página
+                            lengthMenu: [10, 25, 50, 100], // Opções para o usuário escolher
+                            language: {
+                                url: "locales/Portuguese-Brasil.json" // Caminho para o arquivo JSON local
+                            }
+                        });
+                    },
+                    error: function() {
+                        alert('Erro ao carregar os produtos.');
+                    }
+                });
+            }
+
+            carregarProdutos();
         });
     </script>
 </div>
