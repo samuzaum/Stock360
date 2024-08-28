@@ -21,7 +21,6 @@ body::-webkit-scrollbar {
 }
 /*header*/
   header {
-    width: 100%;
     background-color: #BE8a4A;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     top: 0;
@@ -506,3 +505,21 @@ div#sobre-content{
   }
 }
 /*entrada*/
+/*produtos*/
+  .table-responsive {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch !important;
+  }
+
+  .table-responsive > .table-bordered {
+    border: 0;
+  }
+  .card-body {
+    flex: 1 1 auto;
+    min-height: 1px;
+    padding: 1.25rem;
+  }
+  
+/*produtos*/ 
