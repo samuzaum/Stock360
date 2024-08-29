@@ -55,18 +55,22 @@
             </div>
             <div class="form-row">
                 <div class="form-column">
-                    <label for="dimensao" class="entrada-label">Dimensão:</label>
-                    <input type="text" id="dimensao" name="dimensao" class="entrada-input">
+                    <label for="largura" class="entrada-label">Largura (cm):</label>
+                    <input type="number" id="largura" name="largura" class="entrada-input" required>
                 </div>
                 <div class="form-column">
-                    <label for="descricao" class="entrada-label">Descrição Breve:</label>
-                    <textarea id="descricao" name="descricao" class="entrada-textarea" rows="1"></textarea>
+                    <label for="altura" class="entrada-label">Altura (cm):</label>
+                    <input type="number" id="altura" name="altura" class="entrada-input" required>
+                </div>
+                <div class="form-column">
+                    <label for="profundidade" class="entrada-label">Profundidade (cm):</label>
+                    <input type="number" id="profundidade" name="profundidade" class="entrada-input" required>
                 </div>
             </div>
             <div class="form-row">
                 <div class="form-column">
-                    <label for="validade" class="entrada-label">Data de Validade/Reposição:</label>
-                    <input type="date" id="validade" name="validade" class="entrada-input">
+                    <label for="descricao" class="entrada-label">Descrição Breve (Opcional):</label>
+                    <textarea id="descricao" name="descricao" class="entrada-textarea" rows="1"></textarea>
                 </div>
                 <div class="form-column">
                     <label for="fornecedor" class="entrada-label">Fornecedor/Marca:</label>
@@ -75,8 +79,18 @@
             </div>
             <div class="form-row">
                 <div class="form-column">
+                    <label for="fileira" class="entrada-label">Localização (Fileira):</label>
+                    <select id="fileira" name="fileira" class="entrada-select" required>
+                        <option value="1">Fileira 1: Objetos de papelaria e EPI's</option>
+                        <option value="2">Fileira 2: Peças de pequeno porte</option>
+                        <option value="3">Fileira 3: Cordas náuticas</option>
+                        <option value="4">Fileira 4: Cordas náuticas</option>
+                        <option value="5">Fileira 5: Braços de madeira e fibra de bananeira</option>
+                    </select>
+                </div>
+                <div class="form-column">
                     <label for="preco" class="entrada-label">Preço:</label>
-                    <input type="text" id="preco" name="preco" class="entrada-input" required>
+                    <input type="number" step="0.01" id="preco" name="preco" class="entrada-input" required>
                 </div>
             </div>
             <button type="submit" class="entrada-button">Cadastrar Produto</button>

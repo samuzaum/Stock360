@@ -5,18 +5,6 @@ $(document).ready(function(){
         setTimeout(function() {
             $("#main-content").load("pages/" + page + ".html", function() {
                 $("#main-content").removeClass("fade");
-
-                // Inicializa o DataTables se a página carregada contiver a tabela
-                if ($("#dataTable").length) {
-                    $('#dataTable').DataTable({
-                        paging: true,
-                        searching: true,
-                        order: [[0, 'asc']], // Ordena a primeira coluna (Nome) por padrão
-                        language: {
-                            url: "//cdn.datatables.net/plug-ins/1.13.6/i18n/Portuguese-Brasil.json" // Traduz para Português
-                        }
-                    });
-                }
             });
         }, 300);
 

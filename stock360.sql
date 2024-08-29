@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Tempo de geração: 24/08/2024 às 15:06
+-- Tempo de geração: 29/08/2024 às 12:20
 -- Versão do servidor: 8.3.0
 -- Versão do PHP: 8.2.18
 
@@ -39,20 +39,12 @@ CREATE TABLE IF NOT EXISTS `produtos` (
   `validade` date DEFAULT NULL,
   `fornecedor` varchar(255) DEFAULT NULL,
   `preco` decimal(10,2) NOT NULL,
+  `largura` float NOT NULL,
+  `altura` float NOT NULL,
+  `profundidade` float NOT NULL,
+  `fileira` int NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Despejando dados para a tabela `produtos`
---
-
-INSERT INTO `produtos` (`id`, `nome`, `categoria`, `quantidade`, `unidade`, `dimensao`, `descricao`, `validade`, `fornecedor`, `preco`) VALUES
-(1, 'teste de nome', 'teste de categoria', 2, 'kg', '2m', 'sim mano', '1999-02-01', 'samuuel', 2.00),
-(2, 'sim', 'sim', 3, 'litro', 'sim', 'sim', '1111-11-11', 'sim', 0.00),
-(3, 'sim', 'sim', 4, 'm', '3287348927', 'sa', '1999-12-11', 'buceta', 0.00),
-(4, 'sim', 'sim', 4, 'litro', '43208', 'entendi', '0848-08-04', 'samherjogh', 0.00),
-(5, 'sim', 's', 3, 'm', 'grande', 'dasçkhdasl', '0000-00-00', 'dasdas', 0.00),
-(6, 'buceta', 'caralho', 69, 'litro', 'grande', 'sim', '3727-07-31', '382190321', 99999999.99);
+) ENGINE=MyISAM AUTO_INCREMENT=19 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- --------------------------------------------------------
 
