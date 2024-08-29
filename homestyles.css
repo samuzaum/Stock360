@@ -339,6 +339,12 @@ div#sobre-content{
   }
 /*fornecedor*/
 /*suporte*/
+
+.divfooter{
+  text-align:center;
+  font-size:20px;
+}
+
   .suporte-page h1 {
     text-align: center;
     color: #333;
