@@ -1,7 +1,7 @@
 <div>
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary"></h6>
+            <h6 class="m-0 font-weight-bold text-primary">Lista de Produtos</h6>
         </div>
         <div class="card-body">
             <div class="table-responsive">
@@ -12,10 +12,11 @@
                             <th>Categoria</th>
                             <th>Quantidade</th>
                             <th>Unidade</th>
-                            <th>Dimensão</th>
+                            <th>Dimensões (L x A x P)</th>
                             <th>Descrição</th>
                             <th>Validade</th>
                             <th>Fornecedor</th>
+                            <th>Fileira</th>
                             <th>Preço</th>
                         </tr>
                     </thead>
@@ -25,10 +26,11 @@
                             <th>Categoria</th>
                             <th>Quantidade</th>
                             <th>Unidade</th>
-                            <th>Dimensão</th>
+                            <th>Dimensões (L x A x P)</th>
                             <th>Descrição</th>
                             <th>Validade</th>
                             <th>Fornecedor</th>
+                            <th>Fileira</th>
                             <th>Preço</th>
                         </tr>
                     </tfoot>
@@ -75,7 +77,7 @@
                             pageLength: 10, // Número padrão de itens por página
                             lengthMenu: [10, 25, 50, 100], // Opções para o usuário escolher
                             language: {
-                                url:"js/lib/pt_br.json"
+                                url: "js/lib/pt_br.json"
                             }
                         });
                     },

@@ -2,3 +2,5 @@ Inicio
 criar a soma caso exista produtos existentes no banco de dados
 lembrar o que eu queria na parte de fornecedores 
 implementar o pedidos do davi
+criar calculo de tamanho do produto == tamanho estoque
+imprimir pedidos / log
