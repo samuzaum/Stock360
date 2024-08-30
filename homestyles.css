@@ -378,7 +378,23 @@ div#sobre-content{
 
 @media (max-width:460px){
   #sobre-content h1,p{
-    padding-top: 12rem;
+    padding-top: 2rem;
     font-size: 2rem;
   }
 }
+
+@media (max-width:330px){
+  #sobre-content h1{
+    padding-top: 4rem;
+    font-size: 2rem;
+  }
+}
+
+@media (max-width:270px){
+  #sobre-content h1{
+    font-size: 1.5rem;
+    padding-top: 12rem;
+  }
+}
+
+
