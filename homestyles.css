@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 /* Reset CSS */
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -15,90 +15,104 @@ body {
   font-size: 16px;
   font-family: "Montserrat", sans-serif;
 }
-body::-webkit-scrollbar {
-  width: 0px; 
-  background: transparent;
+
+header {
+  width: 100%;
+  background-color: #BE8a4A;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  overflow: hidden;
 }
-/*header*/
-  header {
-    background-color: #BE8a4A;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    top: 0;
-    left: 0;
-    z-index: 1000;
-  }
 
-  .mainlogo {
-    margin-left: 1vw;
-    width: 5vw;
-  }
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0;
+}
 
-  .navbar-toggler {
-    position: relative;
-    z-index: 1050 ;
-  }
+.search-input:focus {
+  outline: none;
+  border-color: #6c757d;
+  box-shadow: 0 0 0 2px rgba(108, 117, 125, 0.1);
+}
 
-  .navbar {
-    padding: 1rem;
-    margin-left: auto;
-  }
+.main-nav ul {
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  margin-right: 3vw;
+}
 
-  .navbar-nav .nav-link {
-    color: #fff; 
-    font-size: 1.1rem;
-    padding: 0.5rem 1rem; 
-    text-decoration: none; 
-    transition: color 0.3s, background-color 0.3s; 
-  }
+.main-nav ul li a{
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 12px;
+  transition: background-color 0.3s ease;
+  
+}
+.main-nav ul li a:hover {
+  background-color: #dbad75;
+  color: #fff;
+}
 
-
-  .navbar-nav .nav-link.active {
-    background-color: #a7743d; 
-    color: #fff !important; 
-    border-radius: 0.25rem; 
-  }
-
-
-  .navbar-nav .nav-link:hover {
-    color: #cca677; 
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 0.25rem;
-  }
-
-  /* Estilos do menu hamburguer */
-  .dropdown-menu {
-    border: none; 
-  }
-
-  .dropdown-item {
-    color: #fff ;
-  }
-
-  .dropdown-item:hover {
-    background-color: #a7743d !important; /* Cor de fundo dos itens ao passar o mouse */
-    color: #f8f9fa !important; /* Cor do texto dos itens ao passar o mouse */
-  }
-
-  .dropdown-menu-end {
-    right: 0; 
-  }
-/*header*/
 .container {
   display: flex;
   flex: 1;
-
 }
+
+aside {
+  width: 14%;
+  background-color:#c8baab7c;
+  box-shadow: 0rem 0rem 1rem #bcacc7;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.mainlogo {
+  margin-left: 3vw;
+  width: 5vw;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+.asidediv {
+  margin-top: 2rem ;
+  margin-bottom: 1.5rem;
+}
+
+.asidelink {
+  display: block;
+  font-size: 1rem;
+  border: 2px solid #be8a4a67;
+  text-decoration: none;
+  text-align: center;
+  padding: 0.5rem;
+  margin-bottom: 3rem;
+  color: #333;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  overflow-wrap: break-word;
+}
+
+.asidelink:hover {
+  background-color: #BE8a4A;
+  color: #fff;
+}
+
  main { /* PROIBIDO MEXER */
   flex: 1;
-}
-#main-content {
-  opacity: 1;
-  transition: opacity 0.3s ease-in-out;
+
 }
 
-#main-content.fade {
-  opacity: 0;
-}
 footer {
   background-color: #BE8a4A;
   padding: 10px 20px;
@@ -112,60 +126,36 @@ footer {
   border-radius: 8px;
   padding: 20px;
   width: 300px;
+<<<<<<< Updated upstream
 }
 /* sobre.html start */
 div#sobre-content{
+=======
+>>>>>>> Stashed changes
   text-align: center;
-  top: 35%;
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  display: block; /* Isso pode ser alterado dinamicamente pelo JavaScript */
+}
+.product img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
 }
 
-#sobre-content h1{
-  text-align: center;
-  font-size: 3rem;
-  padding-bottom: 5px;
-}
-
-#sobre-content p{
-  padding-top: 20px;
-  padding-bottom: 20px;
-  text-align: justify;
-  border-top: 2px solid #dbad75;
-  border-bottom: 2px solid #dbad75;
+.product h2 {
   font-size: 1.5rem;
+  margin: 10px 0;
 }
 
-#sobre-content a{
-  padding-top: 12px;
-  float: left;
-  text-decoration: none;
-  font-size: 1.3rem;
-}
-#sobre-content a:hover{
-  text-decoration: underline 1px;
-}
-/* Css da proposta e metodo */
-#proposta-metodo{
-  display: inline-flex;
-  text-align: center;
-  top: 65%;
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  gap: 4rem;
-  margin-top: 1.5rem;
+.product p {
+  font-size: 1rem;
+  color: #666;
 }
 
-#proposta-metodo h2{
-  font-size: 1.5rem;
-}
-
-#proposta-metodo p{
+.product .price {
   font-size: 1.2rem;
+  font-weight: bold;
+  margin: 10px 0;
 }
-/* sobre.html end */
 
 @keyframes pulse {
   0% {
@@ -179,13 +169,38 @@ div#sobre-content{
   }
 }
 
+.product .buy-button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 10px;
+  background-color: #BE8a4A;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: transform 0.2s; /* Adiciona uma transição suave */
+}
+
+.product .buy-button.pulse {
+  animation: pulse 0.6s ease;
+}
+
+.product .buy-button i {
+  margin-right: 5px;
+}
+
 @media (max-width: 1200px) {
   body {
     font-size: 14px;
   }
+
   .asidelink {
     font-size: 0.8rem;
   }
+
+  .cha {
+    margin: 0 5%;
+  }
+
   .main-nav ul {
     flex-direction: row;
     gap: 15px;
@@ -201,11 +216,19 @@ div#sobre-content{
     font-size: 0.7rem;
   }
 
+  .search-box .search-input {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
   .main-nav ul {
     flex-direction: column;
     gap: 10px;
   }
 
+  .cha {
+    margin: 0 2%;
+  }
 }
 
 @media (max-width: 480px) {
@@ -216,12 +239,55 @@ div#sobre-content{
   .asidelink {
     font-size: 0.6rem;
   }
+
+  .search-box .search-input {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
   .main-nav ul {
     flex-direction: column;
     gap: 10px;
   }
 
+  .cha {
+    margin: 0 1%;
+  }
 }
+
+.menu-toggle {
+  display: none;
+}
+
+.menu-side {
+  position: fixed;
+  top: 0;
+  right: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: right 0.3s ease;
+  z-index: 1100;
+}
+
+.menu-side.open {
+  right: 0;
+}
+
+.side-nav {
+  padding-top: 20px;
+}
+
+.side-nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.side-nav ul li {
+  margin-bottom: 10px;
+}
+
 .notification {
   position: fixed;
   top: 20px;
@@ -251,6 +317,7 @@ div#sobre-content{
 div#sobre-content{
   max-width: 858px;
   display: inline-block;
+<<<<<<< Updated upstream
   text-align: center;
   top: 35%;
   position: absolute;
@@ -445,244 +512,79 @@ div#sobre-content{
   justify-content: center;
 }
 .form-pedidos p, h1, h2, h3, h4 {
+=======
+  padding-top: 8rem;
+>>>>>>> Stashed changes
   text-align: center;
+  top: 35%;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#sobre-content img{
+  width: 12rem;
+}
+
+#sobre-content h1{
+  text-align: center;
+  font-size: 2rem;
+  padding-bottom: 5px;
+}
+
+#sobre-content p{
+  padding-top: 12px;
+  padding-bottom: 20px;
+  text-align: justify;
+  border-top: 2px solid #dbad75;
+  font-size: 1.3rem;
+}
+
+/* Css da proposta e metodo */
+#proposta-metodo {
+  display: inline-flexbox;
+  flex-wrap: wrap;
+}
+
+#proposta-metodo h2 {
   margin-bottom: 10px;
 }
-.form-pedidos input {
-  text-align: center;
-  border-radius: 10px;
-}
-.pesquisa-pedidos{
-  display: flex;
-  justify-content: center;
-  margin: 0;
-}
-.pesquisa-pedidos input {
-  width: 300px;
-  height: 30px;
-  margin-left: 30px;
-}
-.pesquisa-pedidos button {
-  padding: 10px;
-  height: 30px;
-  display: flex;
-  align-items: center;
-  background: none;
-}
-.limpar-salvar{
-  display: flex;
-  justify-content: flex-end;
-}
-.limpar-salvar-button {
-  padding: 2px;
-  background-color: #651d1c;
-  color: rgba(255, 255, 255, 0.815);
-  margin: 5px;
-}
-.quantidade-pedidos {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
-.quantidade-pedidos input {
-  width: 200px;
-  border-radius: 10px;
-}
-.quantidade-pedidos #adicionar-pedidos {
-  border: none;
-  border-radius: 50%;
-  padding: 5px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 10px;
-  margin-left: 5px;
-  background-color: #651d1c;
-}
-.quantidade-pedidos #remover-pedidos {
-  border: none;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 5px;
-  margin-top: 10px;
-  margin-right: 5px;
-  background-color: #651d1c;
-}
-/*Css Do Davi - Pedidos*/
-/*fornecedor*/
-  .select-grafico{
-    text-align: center;
-    margin-top: 1vw;
-    background-color: #c8baab7c;
-    color: #000000;
-    border: solid 2px #be8a4a67 ;
-    width: 10vw;
-    height: 2vw;
-    border-radius: 12px;
-    font-family: "Montserrat", sans-serif;
-    font-size: 1rem;
-  }
-/*fornecedor*/
-/*suporte*/
-  .suporte-page h1 {
-    text-align: center;
-    color: #333;
-    margin-bottom: 5vw;
-  }
-  .input-section {
-    margin-bottom: 50px;
-    text-align: center;
-  }
-  .input-section input[type="text"] {
-    margin-bottom: 15px;
-    text-align: center;
-    width: 30%;
-    padding: 10px;
-    border: 1px solid #110f0f;
-    border-radius: 5px 10px;
-    font-size: 18px;
-  }
-  .button-sup{
-  margin-bottom: 15px;
-  font-family: "Montserrat", sans-serif;
-  border: 1px solid #cabdb1;
-  background-color: #1b1b1b;
-  color: #fff;
-  font-size: 15px;
-  font-weight: bold;
-  padding: 8px 25px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  transition: transform 80ms ease-in;
-  border-radius: 5px 15px;
-  }
-  .faq-section {
-    margin: 20px 0;
-    padding-top: 5vh;
-    padding: 7vh;
-  }
-  .faq-item {
-    background-color: white;
-    border: 1px solid #ddd;
-    margin-bottom: 10px;
-    border-radius: 5px;
-  }
-  .faq-item h3 {
-    text-align: center;
-    margin: 0;
-    padding: 15px;
-    background-color: #f9f9f9;
-    cursor: pointer;
-  }
-  p{
-  text-align: center;
-  }
-  .faq-item p {
-    display: none;
-    padding: 15px;
-    border-top: 1px solid #ddd;
-    background-color: white;
-  }
-  .faq-item h3:hover {
-    background-color: #f1f1f1;
-  }
-/*suporte*/
-/*entrada*/
-.form-container-entrada {
-  max-width: 90%; 
-  margin: 20px auto; 
-  padding: 1.25rem;
-  border: 1px solid #BE8a4A; 
-  border-radius: 0.5rem; 
-  background-color: #FFFFFF; 
-  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1); 
-  box-sizing: border-box;
-}
-
-
-.form-container-entrada h1 {
-  text-align: center;
-  color: #333333; 
-  margin-bottom: 1.25rem; 
-  font-size: 1.5rem;
-}
-
-.entrada-label {
-  display: block;
-  margin-bottom: 0.5rem;
-  color: #333333; 
-  font-weight: bold; 
-  font-size: 1rem; 
-}
-
-
-.entrada-input, .entrada-select, .entrada-textarea {
-  width: 100%;
-  padding: 0.625rem; 
-  margin-bottom: 1rem; 
-  border: 1px solid #cccccc; 
-  border-radius: 0.25rem;
-  background-color: #f9f9f9; 
+#proposta-metodo p {
   font-size: 1rem;
-  box-sizing: border-box; 
-  resize: none;
+  padding: 20px;
 }
 
-
-.entrada-button {
-  padding: 0.75rem 1.25rem; 
-  border: none;
-  border-radius: 0.25rem; 
-  background-color: #BE8a4A; 
-  color: #FFFFFF; 
-  cursor: pointer;
-  font-size: 1rem; 
-  transition: background-color 0.3s ease; 
-  width: 100%; 
+/* CSS da historia*/
+#historia {
+  position: relative;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
-.entrada-button:hover {
-  background-color: #a7743d; 
+#historia p{
+  font-size: 1rem;
 }
 
-
-.form-row {
-  display: flex;
-  flex-wrap: wrap; 
-  gap: 1rem; 
-}
-
-.form-column {
-  flex: 1;
-  min-width: calc(50% - 1rem); 
-}
-
-
-.entrada-error {
-  color: #BE8a4A; 
-  font-size: 0.875rem; 
-  margin-top: -0.5rem; 
-  margin-bottom: 1rem; 
-}
-
-
-@media (max-width: 768px) {
-  .form-column {
-      min-width: 100%; 
+/* CSS responsividade sobre*/
+@media (max-width:777px){
+  #sobre-content img{
+    display: none;
   }
-
-  .form-container-entrada {
-      padding: 1rem; 
+  #sobre-content h1{
+    font-size: 2rem;
   }
 }
 
-@media (max-width: 480px) {
-  .form-container-entrada h1 {
-      font-size: 1.25rem; 
+@media (max-width:460px){
+  #sobre-content h1,p{
+    padding-top: 12rem;
+    font-size: 2rem;
   }
+<<<<<<< Updated upstream
 
   .entrada-label, .entrada-input, .entrada-select, .entrada-textarea, .entrada-button {
       font-size: 0.875rem;
@@ -711,3 +613,6 @@ div#sobre-content{
   }
   
 /*produtos*/ 
+=======
+}
+>>>>>>> Stashed changes
