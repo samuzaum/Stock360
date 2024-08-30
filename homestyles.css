@@ -126,12 +126,6 @@ footer {
   border-radius: 8px;
   padding: 20px;
   width: 300px;
-<<<<<<< Updated upstream
-}
-/* sobre.html start */
-div#sobre-content{
-=======
->>>>>>> Stashed changes
   text-align: center;
   display: block; /* Isso pode ser alterado dinamicamente pelo JavaScript */
 }
@@ -387,35 +381,4 @@ div#sobre-content{
     padding-top: 12rem;
     font-size: 2rem;
   }
-<<<<<<< Updated upstream
-
-  .entrada-label, .entrada-input, .entrada-select, .entrada-textarea, .entrada-button {
-      font-size: 0.875rem;
-  }
-
-  .entrada-button {
-      padding: 0.5rem 1rem; 
-  }
 }
-/*entrada*/
-/*produtos*/
-  .table-responsive {
-    display: block;
-    width: 100%;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch !important;
-  }
-
-  .table-responsive > .table-bordered {
-    border: 0;
-  }
-  .card-body {
-    flex: 1 1 auto;
-    min-height: 1px;
-    padding: 1.25rem;
-  }
-  
-/*produtos*/ 
-=======
-}
->>>>>>> Stashed changes
