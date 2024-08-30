@@ -121,6 +121,7 @@ footer {
   text-align: center;
 }
 
+<<<<<<< Updated upstream
 .product {
   border: 1px solid #ccc;
   border-radius: 8px;
@@ -364,6 +365,112 @@ div#sobre-content{
   font-size: 1.2rem;
 }
 /* CSS para responsividade */
+=======
+/* sobre.html start */
+div#sobre-content{
+    max-width: 858px;
+    display: inline-block;
+    padding-top: 6rem;
+    text-align: center;
+    top: 35%;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  #sobre-content img{
+    width: 14rem;
+  }
+  
+  #sobre-content h1{
+    text-align: center;
+    font-size: 2.4rem;
+    padding-bottom: 5px;
+  }
+  
+  #sobre-content p{
+    padding-top: 12px;
+    padding-bottom: 20px;
+    text-align: justify;
+    border-top: 2px solid #dbad75;
+    font-size: 1.5rem;
+  }
+  
+  /* Css da proposta e metodo */
+  #proposta-metodo {
+    display: inline-flexbox;
+    flex-wrap: wrap;
+  }
+  
+  #proposta-metodo h2 {
+    margin-bottom: 10px;
+  }
+  
+  #proposta-metodo p {
+    font-size: 1rem;
+    /* padding: 20px; */
+  }
+  
+  
+  /* CSS da historia*/
+  #historia {
+    position: relative;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    margin-top: 4rem;
+  }
+  
+  #historia p{
+    font-size: 1rem;
+  }
+  
+  /* CSS responsividade sobre*/
+  @media (max-width:1050px){
+    #sobre-content img{
+      display: none;
+    }
+    #sobre-content h1{
+      font-size: 2rem;
+    }
+  }
+  
+  @media (max-width:460px){
+    #sobre-content h1,p{
+      padding-top: 8rem;
+      font-size: 2rem;
+    }
+  }
+  /* CSS para responsividade */
+  
+  @media (max-width: 1340px){
+    #proposta-metodo {
+      margin-top: 6rem;
+    }
+  }
+  
+  @media(max-width: 1040px){
+    #proposta-metodo {
+      margin-top: 10rem;
+    }
+  }
+  
+  @media (max-width: 800px) {
+    #sobre-content {
+      width: 100%;
+      max-width: 800px;
+      margin: 0 auto;
+  }
+  }
+
+  @media(max-width: 200px){
+    #historia{
+      padding-top: 6rem;
+    }
+  }
+  /* sobre.html end */
+>>>>>>> Stashed changes
 
 @media (max-width: 1340px){
   #proposta-metodo {
