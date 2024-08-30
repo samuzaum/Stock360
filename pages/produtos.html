@@ -1,4 +1,92 @@
 <div>
-    <h1>Produtos</h1>
-    <p>Confira nossos produtos disponíveis aqui.</p>
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">Lista de Produtos</h6>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Categoria</th>
+                            <th>Quantidade</th>
+                            <th>Unidade</th>
+                            <th>Dimensões (L x A x P)</th>
+                            <th>Descrição</th>
+                            <th>Validade</th>
+                            <th>Fornecedor</th>
+                            <th>Fileira</th>
+                            <th>Preço</th>
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Categoria</th>
+                            <th>Quantidade</th>
+                            <th>Unidade</th>
+                            <th>Dimensões (L x A x P)</th>
+                            <th>Descrição</th>
+                            <th>Validade</th>
+                            <th>Fornecedor</th>
+                            <th>Fileira</th>
+                            <th>Preço</th>
+                        </tr>
+                    </tfoot>
+                    <tbody>
+                        <!-- O conteúdo será adicionado via AJAX -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Inclua jQuery primeiro -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+
+    <!-- Depois, inclua os plugins do jQuery -->
+    <script src="vendor/datatables/jquery.dataTables.min.js"></script>
+    <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
+
+    <!-- Por fim, inclua seus scripts customizados -->
+    <script src="js/demo/datatables-demo.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            function carregarProdutos() {
+                $.ajax({
+                    url: 'produtos-registrados.php',
+                    method: 'GET',
+                    success: function(response) {
+                        console.log(response); // Verifica a resposta no console
+
+                        // Se DataTables já estiver inicializado, destrua-o
+                        if ($.fn.DataTable.isDataTable('#dataTable')) {
+                            $('#dataTable').DataTable().clear().destroy();
+                        }
+
+                        // Atualiza o conteúdo da tabela
+                        $('#dataTable tbody').html(response);
+
+                        // Inicializa o DataTables
+                        $('#dataTable').DataTable({
+                            paging: true,
+                            searching: true,
+                            order: [[0, 'asc']],
+                            pageLength: 10, // Número padrão de itens por página
+                            lengthMenu: [10, 25, 50, 100], // Opções para o usuário escolher
+                            language: {
+                                url: "js/lib/pt_br.json"
+                            }
+                        });
+                    },
+                    error: function() {
+                        alert('Erro ao carregar os produtos.');
+                    }
+                });
+            }
+            carregarProdutos();
+        });
+    </script>
 </div>
