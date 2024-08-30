@@ -330,6 +330,7 @@ div#sobre-content{
 }
 
 #sobre-content p{
+  text-align: justify;
   padding-top: 12px;
   padding-bottom: 20px;
   text-align: justify;
@@ -348,6 +349,7 @@ div#sobre-content{
 }
 
 #proposta-metodo p {
+  text-align: justify;
   font-size: 1rem;
   padding: 20px;
 }
