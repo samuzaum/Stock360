@@ -413,8 +413,30 @@ div#sobre-content{
     width: 100%; /* Tornar os botões maiores em telas pequenas */
     padding: 10px;
   }
+
+  .quantidade-pedidos {
+    flex-direction: row; /* Alinhar os itens na mesma linha */
+    justify-content: space-between; /* Espaçar os botões */
+  }
+
+  .quantidade-pedidos #adicionar-pedidos,
+  .quantidade-pedidos #remover-pedidos {
+    width: 30px; /* Definir uma largura fixa para os botões */
+    height: 30px; /* Garantir que a altura dos botões seja igual */
+    margin: 0; /* Remover margens */
+    display: flex;
+    align-items: center; /* Centralizar verticalmente o conteúdo dos botões */
+    justify-content: center; /* Centralizar horizontalmente o conteúdo dos botões */
+    padding: 0; /* Remover padding adicional */
+  }
+
+  .quantidade-pedidos input {
+    margin-top: 0; /* Remover a margem superior */
+    width: auto; /* Ajustar a largura do input para ser mais flexível */
+  }
 }
 
+  
 
 /*Css Do Davi - Pedidos*/
 /*fornecedor*/
