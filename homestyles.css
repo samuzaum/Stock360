@@ -353,7 +353,7 @@ div#sobre-content{
   height: 30px;
   display: flex;
   justify-content: center;
-  align-items:flex-start;
+  align-items: center;
   margin-left: 5px;
   background: none;
   
@@ -364,7 +364,7 @@ div#sobre-content{
   height: 40px;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   padding: 5px;
   margin-right: 5px;
   background: none;
@@ -385,19 +385,15 @@ div#sobre-content{
   .limpar-salvar {
     justify-content: center;
   }
-
-  .pesquisa-pedidos {
-    flex-direction: column;
-  }
+.pesquisa-pedidos input{
+  width: 100%;
+}
 
   .pesquisa-pedidos button {
-    width: 100%;
     margin-top: 10px;
   }
 
-  .quantidade-pedidos {
-    flex-direction: column;
-  }
+ 
 
   .quantidade-pedidos input {
     margin-top: 10px;
